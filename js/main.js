@@ -25,7 +25,7 @@ for (var i = 0; i < portraits.length; i++) {
 let kebab = true
 function update() {
 
-	portraitJeeper.style.opacity = ( window.innerHeight * 0.05 + 100 - window.scrollY) / 100
+	portraitJeeper.style.opacity = (100 - window.scrollY) / 100
 	if (window.scrollY > 10){
 		myNameIs.textContent= "Some may know me as"
 		name.textContent= "Dev"

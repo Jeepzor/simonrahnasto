@@ -4,6 +4,7 @@ let myNameIs = document.getElementById("my-name-is")
 let name = document.getElementById("name")
 let surname = document.getElementById("surname")
 let intro = document.getElementById("introduction")
+let scrollDown = document.getElementById("scroll-down")
 
 
 for (var i = 0; i < portraits.length; i++) {
@@ -21,11 +22,11 @@ for (var i = 0; i < portraits.length; i++) {
 	  iterations: 1,
 	})
 }
-
+let kebab = true
 function update() {
 
 	portraitJeeper.style.opacity = ( window.innerHeight * 0.05 + 100 - window.scrollY) / 100
-	if (window.scrollY > 100){
+	if (window.scrollY > 10){
 		myNameIs.textContent= "Some may know me as"
 		name.textContent= "Dev"
 		surname.textContent= "Jeeper"
@@ -35,10 +36,17 @@ function update() {
 		surname.textContent= "Rahnasto"
 	}
 
-	if (window.scrollY > 800){
+	if (window.scrollY > window.innerHeight * 0.25){
 		intro.style.position = "absolute"
-		intro.style.top = "800px"
+		intro.style.top = window.innerHeight * 0.25 + "px"
 		intro.style.width = "100%"
+		let scrollDownPos = scrollDown.getBoundingClientRect();
+		scrollDown.style.position = "absolute"
+		if(kebab){
+			kebab = false
+			scrollDown.style.top = scrollDownPos.top + "px"
+		}
+
 	}else{
 		intro.style.position = "fixed"
 		intro.style.top = "0px"

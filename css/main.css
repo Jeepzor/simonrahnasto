@@ -1,0 +1,105 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #5B84B1FF;
+}
+
+p{
+	font-size: 16px;
+}
+
+#hello{
+	position: absolute;
+	top: 50px;
+}
+
+#scroll-area{
+	width: 100%;
+	height: 1000vh;
+}
+
+/* #FC766AFF, #5B84B1FF) */
+#introduction{
+	top: 0px;
+	position:fixed;
+	background-color: white;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 90%;
+}
+
+.portrait{
+	position:absolute;
+	border-color: white;
+	border: 378px;
+	border-style:none dashed none dashed;
+	border-color: white;
+	background: linear-gradient(0deg, #FFFFFFFF, #5B84B1FF);
+	border-radius: 50%;
+	padding: 20px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#portraits{
+	top: 400px;
+	position:absolute;
+}
+
+#name-column{
+	top: 700px;
+	position:absolute;
+}
+
+#name-row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 25px;
+	font-size: 64px;
+}
+
+#my-name-is{
+	color: black;
+	font-size: 32px;
+}
+
+.name{
+	font-size: 64px;
+}
+
+#name{
+	color: #FC766AFF;
+}
+
+#surname{
+	color: #5B84B1FF;
+}
+
+#youtube{
+	top: 120vh;
+	position:relative;
+}
+
+#scroll-down{
+	position: fixed;
+	bottom: 1%;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 32px;
+}
+
+#scroll-down-text{
+	color: white;
+	font-size: 32px;
+}
+
+#scroll-down-icon{
+	font-size: 32px;
+}

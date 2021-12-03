@@ -4,7 +4,7 @@ let myNameIs = document.getElementById("my-name-is")
 let name = document.getElementById("name")
 let surname = document.getElementById("surname")
 let intro = document.getElementById("introduction")
-let scrollDown = document.getElementById("scroll-down")
+let scrollDown = document.getElementById("scroll-down-column")
 
 
 for (var i = 0; i < portraits.length; i++) {

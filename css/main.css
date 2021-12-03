@@ -85,7 +85,7 @@ p{
 
 #youtube{}
 
-#scroll-down{
+#scroll-down-column{
 	position: fixed;
 	top: 90%;
 	left: 50%;
@@ -93,14 +93,11 @@ p{
 	font-size: 32px;
 }
 
-#scroll-down-text{
+.scroll-down{
 	color: white;
 	font-size: 32px;
 }
 
-#scroll-down-icon{
-	font-size: 32px;
-}
 
 #cv{
 	padding-top: 10%;
@@ -108,7 +105,7 @@ p{
 	background-color: #5B84B1FF;
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1280px) {
+@media only screen and (min-width: 1000px) and (max-width: 1280px) and (min-height: 500px) {
 	.portrait{
 		border-style:none;
 		background: linear-gradient(0deg, #FFFFFFFF, #5B84B1FF);
@@ -119,7 +116,7 @@ p{
 	}
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) and (min-height: 500px){
 	.portrait{
 		border-style:none;
 		background: linear-gradient(0deg, #FFFFFFFF, #5B84B1FF);
@@ -129,6 +126,37 @@ p{
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+
+	.scroll-down{
+		color: white;
+		font-size: 28px;
+	}
 }
+
+@media only screen and (max-height: 1000px) {
+	.portrait{
+		border-style:none;
+		width:300px;
+		padding: 10px;
+		transform: translate(-50%, -75%);
+	}
+
+	.scroll-down{
+		color: white;
+		font-size: 24px;
+	}
+
+	#hello{
+		position: absolute;
+		top: 10%;
+	}
+
+	#name-column{
+		top: 80%;
+		position:absolute;
+	}
+}
+
+
 
 /* 1280 < kebab */

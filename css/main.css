@@ -103,8 +103,32 @@ p{
 }
 
 #cv{
-	padding-top: 100vh;
+	padding-top: 10%;
 	height: 100vh;
-	margin-top: 20vh;
 	background-color: #5B84B1FF;
 }
+
+@media only screen and (min-width: 1000px) and (max-width: 1280px) {
+	.portrait{
+		border-style:none;
+		background: linear-gradient(0deg, #FFFFFFFF, #5B84B1FF);
+		border-radius: 50%;
+		padding: 20px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.portrait{
+		border-style:none;
+		background: linear-gradient(0deg, #FFFFFFFF, #5B84B1FF);
+		border-radius: 50%;
+		width:300px;
+		padding: 10px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+/* 1280 < kebab */

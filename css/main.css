@@ -4,17 +4,22 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: 'Roboto-Regular';
+	src:url("assets/fonts/Roboto-Regular.ttf");
+}
+
 body{
-	background-color: #5B84B1FF;
+	background-color: #FFFFFFFF;
 }
 
 p{
 	font-size: 16px;
 }
 
-#hello{
-	position: absolute;
-	top: 50px;
+@font-face {
+	font-family: 'Roboto-Regular';
+	src:url("assets/fonts/Roboto-Regular.ttf");
 }
 
 #scroll-area{
@@ -35,6 +40,17 @@ p{
 	height: 85%;
 }
 
+#cv{
+	padding-top: 10%;
+	height: 100vh;
+	background-color: #5B84B1FF;
+}
+
+#hello{
+	position: absolute;
+	top: 50px;
+}
+
 .portrait{
 	position:absolute;
 	border-color: white;
@@ -45,16 +61,16 @@ p{
 	border-radius: 50%;
 	padding: 20px;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%);
 }
 
 #portraits{
-	top: 400px;
+	top:15%;
 	position:absolute;
 }
 
 #name-column{
-	top: 700px;
+	bottom: 0;
 	position:absolute;
 }
 
@@ -98,33 +114,17 @@ p{
 	font-size: 32px;
 }
 
-
-#cv{
-	padding-top: 10%;
-	height: 100vh;
-	background-color: #5B84B1FF;
-}
-
-@media only screen and (min-width: 1000px) and (max-width: 1280px) and (min-height: 500px) {
+@media only screen and (min-width: 1000px) and (max-width: 1280px) and (min-height: 1050px) {
 	.portrait{
 		border-style:none;
-		background: linear-gradient(0deg, #FFFFFFFF, #5B84B1FF);
-		border-radius: 50%;
-		padding: 20px;
-		left: 50%;
-		transform: translate(-50%, -50%);
 	}
 }
 
-@media only screen and (max-width: 1000px) and (min-height: 500px){
+@media only screen and (max-width: 1000px) and (min-height: 1050px){
 	.portrait{
 		border-style:none;
-		background: linear-gradient(0deg, #FFFFFFFF, #5B84B1FF);
-		border-radius: 50%;
-		width:300px;
+		width:400px;
 		padding: 10px;
-		left: 50%;
-		transform: translate(-50%, -50%);
 	}
 
 	.scroll-down{
@@ -133,12 +133,36 @@ p{
 	}
 }
 
-@media only screen and (max-height: 1000px) {
+@media only screen and (max-height: 1050px) and (min-height: 750px) {
 	.portrait{
 		border-style:none;
-		width:300px;
+		width:400px;
 		padding: 10px;
-		transform: translate(-50%, -75%);
+		transform: translate(-50%);
+	}
+
+	.scroll-down{
+		color: white;
+		font-size: 24px;
+	}
+
+	#hello{
+		position: absolute
+		bottom: 10%;
+	}
+
+	#name-column{
+		top: 80%;
+		position:absolute;
+	}
+}
+
+@media only screen and (max-height: 750px) and (min-height: 200px) {
+	.portrait{
+		border-style:none;
+		width:45vh;
+		padding: 10px;
+		top: 10vh;
 	}
 
 	.scroll-down{
@@ -148,12 +172,15 @@ p{
 
 	#hello{
 		position: absolute;
-		top: 10%;
+		top: 50px;
 	}
 
-	#name-column{
-		top: 80%;
-		position:absolute;
+	#my-name-is{
+		font-size: 24px;
+	}
+
+	.name{
+		font-size: 32px;
 	}
 }
 

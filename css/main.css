@@ -179,8 +179,8 @@ p{
 }
 
 #name-column{
-	bottom: 0;
 	position:absolute;
+	top: 85%;
 }
 
 #name-row{
@@ -262,20 +262,15 @@ p{
 	}
 
 	#hello{
-		font-size: 64px;
-	}
-
-	.name{
 		font-size: 48px;
 	}
 
-	#my-name-is{
+	.name{
 		font-size: 32px;
 	}
 
-	#name-column{
-		top: 80%;
-		position:absolute;
+	#my-name-is{
+		font-size: 24px;
 	}
 }
 
@@ -284,20 +279,37 @@ p{
 		border-style:none;
 		width:45vh;
 		padding: 10px;
-		top: 10vh;
+		top: 5vh;
 	}
 
 	.scroll-down{
 		color: white;
-		font-size: 24px;
+		font-size: 16px;
 	}
 
 	#hello{
-		font-size: 48px;
+		top:10px;
+		font-size: 32px;
+	}
+
+	.name{
+		font-size: 24px;
 	}
 
 	#my-name-is{
-		font-size: 24px;
+		font-size: 16px;
+	}
+
+	#name-column{
+		position:absolute;
+		top: 80%;
+	}
+
+	#scroll-down-column{
+		position: fixed;
+		top: 87%;
+		left: 50%;
+		transform: translate(-50%);
 	}
 
 

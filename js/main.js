@@ -22,7 +22,9 @@ for (var i = 0; i < portraits.length; i++) {
 	  iterations: 1,
 	})
 }
+
 let kebab = true
+let storedHeight = window.innerHeight
 function update() {
 	portraitJeeper.style.opacity = (100 - window.scrollY) / 100
 	if (window.scrollY > 10){
@@ -36,17 +38,27 @@ function update() {
 	}
 
 	if (window.scrollY > window.innerHeight * 0.25){
+		let scrollDownPos = scrollDown.getBoundingClientRect();
+
 		intro.style.position = "absolute"
 		intro.style.top = window.innerHeight * 0.25 + "px"
 		intro.style.width = "100%"
-		let scrollDownPos = scrollDown.getBoundingClientRect();
-		scrollDown.style.position = "absolute"
+
+		if (window.scrollY > window.innerHeight * 0.5) {
+			scrollDown.style.display = "none"
+		}else{
+			scrollDown.style.position = "absolute"
+		}
+
 		if(kebab){
 			kebab = false
+			scrollDown.style.display = ""
 			scrollDown.style.top = scrollDownPos.top + "px"
 		}
 
 	}else{
+		scrollDown.style.display = ""
+		kebab = true
 		intro.style.position = "fixed"
 		intro.style.top = "0px"
 	}

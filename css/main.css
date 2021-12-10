@@ -117,7 +117,8 @@ p{
 	background-color: #2f5783;
 	position: relative;
    border-radius: 65px;
-	padding: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
 }
 
 .project_img{
@@ -159,12 +160,6 @@ p{
    background: rgba(0,0,0, 0.7)
 }
 
-
-#hello{
-	position: absolute;
-	top: 50px;
-}
-
 .portrait{
 	position:absolute;
 	border-color: white;
@@ -196,13 +191,19 @@ p{
 	font-size: 64px;
 }
 
-#my-name-is{
-	color: black;
-	font-size: 32px;
+#hello{
+	position:absolute;
+	top: 50px;
+	font-size: 64px;
 }
 
 .name{
-	font-size: 64px;
+	font-size: 48px;
+}
+
+#my-name-is{
+	color: black;
+	font-size: 32px;
 }
 
 #name{
@@ -253,16 +254,23 @@ p{
 		width:400px;
 		padding: 10px;
 		transform: translate(-50%);
+		top: 40px;
 	}
 
 	.scroll-down{
-		color: white;
 		font-size: 24px;
 	}
 
 	#hello{
-		position: absolute
-		bottom: 10%;
+		font-size: 64px;
+	}
+
+	.name{
+		font-size: 48px;
+	}
+
+	#my-name-is{
+		font-size: 32px;
 	}
 
 	#name-column{
@@ -285,17 +293,14 @@ p{
 	}
 
 	#hello{
-		position: absolute;
-		top: 50px;
+		font-size: 48px;
 	}
 
 	#my-name-is{
 		font-size: 24px;
 	}
 
-	.name{
-		font-size: 32px;
-	}
+
 }
 
 

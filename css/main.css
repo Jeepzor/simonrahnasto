@@ -134,11 +134,11 @@ p{
 	padding-top: 20%;
 }
 
-.project:hover.description {
+.project:hover .description {
 	opacity: 1;
 }
 
-.project:hover.project_img {
+.project:hover .project_img {
 	filter: blur(3px) grayscale(80%);
 }
 

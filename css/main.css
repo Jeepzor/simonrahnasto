@@ -10,11 +10,24 @@
 }
 
 body{
+	font-family: 'Birthstone-Regular', sans-serif;
 	background-color: #FFFFFFFF;
+}
 
+h1{
+	font-size: 80px;
+	color:#FC766AFF;
+}
+
+h2, h3, h4{
+	color: white;
+	text-align: center;
+	grid-column-start: 1;
+ 	grid-column-end: 4;
 }
 
 p{
+	color: white;
 	font-size: 16px;
 }
 
@@ -24,7 +37,7 @@ p{
 }
 
 #scroll-area{
-	width: 100vw;
+	width: 100%;
 	height: 110vh;
 	background-color: #FC766AFF;
 }
@@ -43,9 +56,98 @@ p{
 
 #cv{
 	padding-top: 10%;
-	height: 100vh;
+	min-height: 100vh;
 	background-color: #5B84B1FF;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+ 	grid-template-rows: 50px 1fr 1fr;
 }
+
+/* CV articles that should take us as much horizontal space as possible*/
+.expand{
+
+}
+
+/* CV articles that should have a set width*/
+.sized{
+	min-width: 500px;
+	max-width: 500px;
+	padding: 20px;
+}
+
+#socials{
+	grid-column-start: 1;
+ 	grid-column-end: 4;
+}
+
+#project-container{
+	grid-column-start: 1;
+ 	grid-column-end: 4;
+}
+
+#projects{
+	display: flex;
+   flex-wrap: wrap;
+   align-items:center;
+   justify-content: center;
+}
+
+.project{
+	margin-top: 20px;
+	margin: 20px;
+	background-color: #2f5783;
+	position: relative;
+   border-radius: 65px;
+	padding: 4px;
+}
+
+#projects h2{
+	color: red;
+}
+
+
+.project_img{
+   display: block;
+   width: 100%;
+   height: 100%;
+   border-radius: 65px;
+   transition: .3s ease-out;
+}
+
+.description{
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   color:white;
+   display: flex;
+   flex-direction: column;
+   align-items:center;
+	text-align: center;
+   opacity: 0;
+   border-radius: 65px;
+   transition: .2s ease-out;
+   background: rgba(0,0,0, 0.7)
+}
+
+.project-title{
+	color: #FC766AFF;
+	padding-bottom: 10px;
+	padding-top: 20%;
+}
+
+.project:hover .description {
+  opacity: 1;
+}
+
+.project:hover .project_img {
+   filter: blur(3px) grayscale(80%);
+}
+
+
+
+
 
 #hello{
 	position: absolute;

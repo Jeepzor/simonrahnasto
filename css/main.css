@@ -80,7 +80,6 @@ p{
 
 /* CV articles that should have a set width*/
 .sized{
-	min-width: 500px;
 	max-width: 500px;
 	padding-left: 50px;
 	padding-right: 50px;

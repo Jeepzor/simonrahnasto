@@ -26,9 +26,16 @@ h2, h3, h4{
  	grid-column-end: 4;
 }
 
+h2{
+	line-height: 3;
+	font-size: 32px;
+}
+
 p{
 	color: white;
-	font-size: 16px;
+	font-size: 20px;
+	line-height: 1.3;
+	word-spacing: -1px;
 }
 
 @font-face {
@@ -55,12 +62,15 @@ p{
 }
 
 #cv{
-	padding-top: 10%;
+	padding-top: 200px;
 	min-height: 100vh;
 	background-color: #5B84B1FF;
 	display:grid;
+	grid-row-gap: 250px;
 	grid-template-columns: 1fr 1fr 1fr;
- 	grid-template-rows: 200px 1fr 1fr;
+ 	grid-template-rows: 200px 1fr 0.1fr 0.1fr;
+	justify-content: center;
+
 }
 
 /* CV articles that should take us as much horizontal space as possible*/
@@ -72,11 +82,13 @@ p{
 .sized{
 	min-width: 500px;
 	max-width: 500px;
-	padding: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .social-row{
 	display:flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	margin-top: 20px;
@@ -85,6 +97,7 @@ p{
 .social-button{
 	margin-left: 50px;
 	margin-right: 50px;
+	margin-top: 50px;
 	width: 100px;
 	height: 100px;
 	background-color: #2f5783;
@@ -174,7 +187,7 @@ p{
 }
 
 #portraits{
-	top:15%;
+	top:20%;
 	position:absolute;
 }
 
@@ -193,7 +206,7 @@ p{
 
 #hello{
 	position:absolute;
-	top: 50px;
+	top: 75px;
 	font-size: 64px;
 }
 
@@ -229,6 +242,8 @@ p{
 	font-size: 32px;
 }
 
+/*NB Media affecting only the intro-part */
+
 @media only screen and (min-width: 1000px) and (max-width: 1280px) and (min-height: 1050px) {
 	.portrait{
 		border-style:none;
@@ -254,7 +269,6 @@ p{
 		width:400px;
 		padding: 10px;
 		transform: translate(-50%);
-		top: 40px;
 	}
 
 	.scroll-down{
@@ -279,7 +293,6 @@ p{
 		border-style:none;
 		width:45vh;
 		padding: 10px;
-		top: 5vh;
 	}
 
 	.scroll-down{
@@ -288,7 +301,7 @@ p{
 	}
 
 	#hello{
-		top:10px;
+		top:20px;
 		font-size: 32px;
 	}
 
@@ -311,10 +324,38 @@ p{
 		left: 50%;
 		transform: translate(-50%);
 	}
-
-
 }
 
+/*NB Media affecting only the intro-part */
 
+@media only screen and (max-width: 1520px) {
+	#cv{
+		grid-template-columns: 1fr 1fr;
+	}
 
-/* 1280 < kebab */
+	#socials{
+		grid-column-start: 1;
+	 	grid-column-end: 3;
+	}
+
+	#project-container{
+		grid-column-start: 1;
+	 	grid-column-end: 3;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	#cv{
+		grid-template-columns: 1fr;
+	}
+
+	#socials{
+		grid-column-start: 1;
+	 	grid-column-end: 2;
+	}
+
+	#project-container{
+		grid-column-start: 1;
+	 	grid-column-end: 2;
+	}
+}

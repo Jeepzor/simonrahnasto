@@ -19,6 +19,18 @@ h1{
 	color:#FC766AFF;
 }
 
+li{
+	font-size: 24px;
+	padding-left: .5em;
+
+	color:white;
+}
+
+li::marker{
+	content: "\2714";
+	color: #FC766AFF;
+}
+
 h2, h3, h4{
 	color: white;
 	text-align: center;

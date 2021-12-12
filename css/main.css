@@ -66,10 +66,10 @@ p{
 	min-height: 100vh;
 	background-color: #5B84B1FF;
 	display:grid;
+
 	grid-row-gap: 250px;
 	grid-template-columns: 1fr 1fr 1fr;
  	grid-template-rows: 200px 1fr 0.1fr 0.1fr;
-	justify-content: center;
 
 }
 
@@ -345,6 +345,7 @@ p{
 @media only screen and (max-width: 1000px) {
 	#cv{
 		grid-template-columns: 1fr;
+		place-items: center;
 	}
 
 	#socials{

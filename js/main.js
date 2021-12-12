@@ -24,7 +24,7 @@ for (var i = 0; i < socialButtons.length; i++) {
 	let target = hoverCircles.item(i)
 	current.onmouseenter = function(){
 		timeline.to(target, 0.2,
-			{width: '100px', height: '100px', ease: Power2.easeOut})
+			{width: '100px', ease: Power2.easeOut})
 	}
 
 	current.onmouseleave = function(){

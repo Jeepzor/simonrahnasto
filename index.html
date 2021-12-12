@@ -7,7 +7,9 @@
       <meta name="keywords" content="Simon Rahnasto, DevJeeper">
 		<link rel="stylesheet" href="css/main.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-		<script type="module" src="js/main.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script type = "module" src="js/main.js" ></script>
 		<title>Homepage</title>
    </head>
 
@@ -42,7 +44,8 @@
 					<h2>Socials</h2>
 					<div class="social-row">
 						<span class="social-button" id = "github">
-							<img
+							<div class="hover-circle"></div>
+							<img class = "social-icon"
     							src="assets/social/github.svg"
 								alt="Github logo"
 								width="50px"
@@ -50,7 +53,8 @@
 						</span>
 
 						<span class="social-button" id = "youtube">
-							<img
+							<div class="hover-circle"></div>
+							<img class = "social-icon"
     							src="assets/social/youtube.svg"
 								alt="Youtube logo"
 								width="70px"
@@ -58,7 +62,8 @@
 						</span>
 
 						<span class="social-button" id = "linkedin">
-							<img
+							<div class="hover-circle"></div>
+							<img class = "social-icon"
     							src="assets/social/linkedin.svg"
 								alt="Github logo"
 								width="50px"
@@ -66,7 +71,8 @@
 						</span>
 
 						<span class="social-button" id = "itchio">
-							<img
+							<div class="hover-circle"></div>
+							<img class = "social-icon"
     							src="assets/social/itchio.svg"
 								alt="Github logo"
 								width="50px"
@@ -78,37 +84,45 @@
 				<article class = "expand" id = "project-container">
 					<h2>Projects</h2>
 					<div id="projects">
-						<div class="project">
-							<img class="project_img" src="https://img.itch.zone/aW1nLzIwNjYxNTgucG5n/315x250%23c/38ZPT8.png">
-							<div class="description">
-								<h3 class = "project-title">Path of Redemption</h3>
-								<p> A dungeon crawler made for the Game Jam competition 'Ludum Dare #44'. With over 3000 entries, it placed 7th in the 'Overall' Category</p>
+						<a href="https://ldjam.com/events/ludum-dare/44/path-of-redemption">
+							<div class="project">
+								<img class="project_img" src="https://img.itch.zone/aW1nLzIwNjYxNTgucG5n/315x250%23c/38ZPT8.png">
+								<div class="description">
+									<h3 class = "project-title">Path of Redemption</h3>
+									<p> A dungeon crawler made for the Game Jam competition 'Ludum Dare #44'. With over 3000 entries, it placed 7th in the 'Overall' Category</p>
+								</div>
 							</div>
-						</div>
+						</a>
 
-						<div class="project">
-							<img class="project_img" src="https://img.itch.zone/aW1hZ2UvNTcxNS8xNjQwNC5wbmc=/315x250%23c/509e73.png">
-							<div class="description">
-								<h3 class = "project-title">Luminosity</h3>
-								<p>An arcade score attack game, which is my first commercial game released on Steam</p>
+						<a href="https://store.steampowered.com/app/346780/Luminosity/">
+							<div class="project">
+								<img class="project_img" src="https://img.itch.zone/aW1hZ2UvNTcxNS8xNjQwNC5wbmc=/315x250%23c/509e73.png">
+								<div class="description">
+									<h3 class = "project-title">Luminosity</h3>
+									<p>An arcade score attack game, which is my first commercial game released on Steam</p>
+								</div>
 							</div>
-						</div>
+						</a>
 
-						<div class="project">
-							<img class="project_img" src="https://img.itch.zone/aW1hZ2UvMjkxODUzLzE0Mjg5ODYucG5n/315x250%23c/aB85jP.png">
-							<div class="description">
-								<h3 class = "project-title">Final Voyage</h3>
-								<p>As an avid RTS player, I naturally had to include 'Final Voyage', an RTS game with a twist!</p>
+						<a href="https://store.steampowered.com/app/346780/Luminosity/">
+							<div class="project">
+								<img class="project_img" src="https://img.itch.zone/aW1hZ2UvMjkxODUzLzE0Mjg5ODYucG5n/315x250%23c/aB85jP.png">
+								<div class="description">
+									<h3 class = "project-title">Final Voyage</h3>
+									<p>As an avid RTS player, I naturally had to include 'Final Voyage', an RTS game with a twist!</p>
+								</div>
 							</div>
-						</div>
+						</a>
 
-						<div class="project">
-							<img class="project_img" src="https://img.itch.zone/aW1nLzMzNDk1OTcucG5n/315x250%23c/wwtc0W.png">
-							<div class="description">
-								<h3 class = "project-title">The Drown</h3>
-								<p>A story driven shooter & base defense game, with an intense and dark atmosphere.</p>
+						<a href="https://windmillgames.itch.io/final-voyage">
+							<div class="project">
+								<img class="project_img" src="https://img.itch.zone/aW1nLzMzNDk1OTcucG5n/315x250%23c/wwtc0W.png">
+								<div class="description">
+									<h3 class = "project-title">The Drown</h3>
+									<p>A story driven shooter & base defense game, with an intense and dark atmosphere.</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
             </article>
 
@@ -128,31 +142,40 @@
 					</p>
 
 					<a href="https://www.youtube.com/c/DevJeeper/videos">
-						<img id = "youtube" src="assets/youtube.png" alt="Youtube Logo">
+						<img class = "social-icon"
+							src="assets/social/youtube.svg"
+							alt="Youtube logo"
+							width="120px"
+						/>
 					</a>
             </article>
 
 				<article class = "sized">
 					<h2>Skills & Experience</h2>
 
-					<h3>Languages</h3>
-					<ul>
-						<li>C/C++</li>
-						<li>Java</li>
-						<li>Javascript</li>
-						<li>Lua</li>
-						<li>Dart</li>
-					</ul>
+					<div id = "langs">
+						<h3>Languages</h3>
+						<ul>
+							<li>C/C++</li>
+							<li>Java</li>
+							<li>Javascript</li>
+							<li>Lua</li>
+							<li>Dart</li>
+						</ul>
+					</div>
 
-					<h3>Tools & Technologies</h3>
-					<ul>
-						<li>Löve</li>
-						<li>Flutter</li>
-						<li>Unity3D</li>
-						<li>OOP</li>
-						<li>UML</li>
-						<li>Git</li>
-					</ul>
+					<div id="tools">
+						<h3>Tools & Technologies</h3>
+						<ul>
+							<li>Löve</li>
+							<li>Flutter</li>
+							<li>Unity3D</li>
+							<li>OOP</li>
+							<li>UML</li>
+							<li>Git</li>
+						</ul>
+					</div>
+
             </article>
 
 

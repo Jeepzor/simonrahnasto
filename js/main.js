@@ -6,21 +6,31 @@ let surname = document.getElementById("surname")
 let intro = document.getElementById("introduction")
 let scrollDown = document.getElementById("scroll-down-column")
 
+let socialButtons = document.getElementsByClassName("social-button")
+let hoverCircles = document.getElementsByClassName("hover-circle")
+
+
+
+let timeline = new TimelineMax()
 
 for (var i = 0; i < portraits.length; i++) {
-   portraits.item(i).animate([
-	  // keyframes
-		{
-		  	borderWidth: '430px',
-		},
-		{
-			borderWidth: '380px',
-		},
-	], {
-	  // timing options
-	  duration: 300,
-	  iterations: 1,
-	})
+	let current = portraits.item(i)
+	timeline.fromTo(current, 1, {borderWidth: '430px'},
+		{borderWidth: '380px', ease: Power2.easeOut})
+}
+
+for (var i = 0; i < socialButtons.length; i++) {
+	let current = socialButtons.item(i)
+	let target = hoverCircles.item(i)
+	current.onmouseenter = function(){
+		timeline.to(target, 0.2,
+			{width: '100px', height: '100px', ease: Power2.easeOut})
+	}
+
+	current.onmouseleave = function(){
+		timeline.to(target, 0.2,
+			{width: '0px', ease: Power2.easeOut})
+	}
 }
 
 let kebab = true

@@ -5,10 +5,11 @@
 }
 
 :root {
-  --main-color: #456c96;
-  --main-dark-color: #294460;
-  --text-color: #FFFFFF;
-  --accent-color: #FC766AFF;
+	--background-color: #FFFFFF;
+	--main-color: #456c96;
+	--main-dark-color: #294460;
+	--text-color: #FFFFFF;
+	--accent-color: #FC766AFF;
 }
 
 @font-face {
@@ -23,7 +24,7 @@ a{
 
 body{
 	font-family: 'Birthstone-Regular', sans-serif;
-	background-color: #FFFFFFFF;
+	background-color: var(--background-color);
 }
 
 h1{
@@ -89,7 +90,7 @@ p{
 #introduction{
 	top: 0px;
 	position:fixed;
-	background-color: white;
+	background-color: var(--background-color);
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -117,7 +118,8 @@ p{
 
 /* CV articles that should have a set width*/
 .sized{
-	max-width: 500px;
+	min-width: 500px;
+	width: 30vw;
 	padding-left: 50px;
 	padding-right: 50px;
 }
@@ -155,6 +157,8 @@ p{
 	text-decoration: underline;
 	text-decoration-color: var(--accent-color);
 	text-underline-offset: 3px;
+	transform: rotate(90deg);
+	transform: scale(0);
 }
 
 .social-icon{
@@ -198,7 +202,7 @@ p{
 .project{
 	margin-top: 20px;
 	margin: 20px;
-	background-color: white;
+	background-color: var(--background-color);
 	position: relative;
    border-radius: 40px;
 	padding: 2px;
@@ -254,11 +258,11 @@ p{
 
 .portrait{
 	position:absolute;
-	border-color: white;
+	border-color: var(--background-color);
 	border: 378px;
 	border-style:none dashed none dashed;
-	border-color: white;
-	background: linear-gradient(0deg, #FFFFFFFF, var(--main-color));
+	border-color: var(--background-color);
+	background: linear-gradient(0deg, var(--background-color), var(--main-color));
 	border-radius: 50%;
 	padding: 20px;
 	left: 50%;
@@ -413,6 +417,10 @@ p{
 		grid-template-rows: 0.5fr 0.5fr 0.1fr 0.1fr 200px;
 	}
 
+	.sized{
+		width: 50vw;
+	}
+
 	#socials{
 		grid-column-start: 1;
 	 	grid-column-end: 3;
@@ -434,6 +442,10 @@ p{
 	#socials{
 		grid-column-start: 1;
 	 	grid-column-end: 2;
+	}
+
+	.sized{
+		width: 70vw;
 	}
 
 	#project-container{

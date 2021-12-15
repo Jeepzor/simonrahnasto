@@ -38,7 +38,7 @@ class SocialButton{
 			gsap.to(this.hover, 0.2,
 	 		  {width: '100px', ease: Power2.easeOut}, '-=0.2')
 	 	  	gsap.to(this.def, 0.2,
-	 		  {y: '90px', rotation: '0deg', scale: 1, ease: Power2.easeOut},)
+	 		  {y: '65px', rotation: '0deg', scale: 1, ease: Power2.easeOut},)
 		});
 
 		this.button.addEventListener('click', e => {

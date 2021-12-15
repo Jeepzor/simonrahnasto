@@ -104,9 +104,9 @@ p{
 	background-color: var(--main-color);
 	display:grid;
 
-	grid-row-gap: 250px;
+	grid-row-gap: 150px;
 	grid-template-columns: 1fr 1fr 1fr;
- 	grid-template-rows: 200px 1fr 0.1fr 0.1fr;
+ 	grid-template-rows: 1fr 0.1fr 0.1fr 200px;
 
 }
 
@@ -409,6 +409,7 @@ p{
 @media only screen and (max-width: 1520px) {
 	#cv{
 		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.5fr 0.5fr 0.1fr 0.1fr 200px;
 	}
 
 	#socials{
@@ -425,6 +426,7 @@ p{
 @media only screen and (max-width: 1000px) {
 	#cv{
 		grid-template-columns: 1fr;
+		grid-template-rows: 0.5fr 0.5fr 0.5fr 0.1fr 0.1fr 200px;
 		place-items: center;
 	}
 

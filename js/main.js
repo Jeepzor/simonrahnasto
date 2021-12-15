@@ -8,10 +8,16 @@ let scrollDown = document.getElementById("scroll-down-column")
 
 let socialButtons = document.getElementsByClassName("social-button")
 let hoverCircles = document.getElementsByClassName("hover-circle")
-
-
-
+let socialDef = document.getElementsByClassName("social-def")
 let timeline = new TimelineMax()
+
+let socialLinks = [
+	"https://github.com/Jeepzor",
+	"https://youtube.com/DevJeeper",
+	"https://www.linkedin.com/in/simon-rahnasto-2b0b4018a/",
+	"https://windmillgames.itch.io/"
+];
+
 
 for (var i = 0; i < portraits.length; i++) {
 	let current = portraits.item(i)
@@ -19,18 +25,41 @@ for (var i = 0; i < portraits.length; i++) {
 		{borderWidth: '380px', ease: Power2.easeOut})
 }
 
-for (var i = 0; i < socialButtons.length; i++) {
-	let current = socialButtons.item(i)
-	let target = hoverCircles.item(i)
-	current.onmouseenter = function(){
-		timeline.to(target, 0.2,
-			{width: '100px', ease: Power2.easeOut})
-	}
+class SocialButton{
+	constructor(id, button, hover, def, link){
+    	this.id = id
+    	this.button = button
+    	this.hover = hover
+    	this.def = def
+		this.link = link
 
-	current.onmouseleave = function(){
-		timeline.to(target, 0.2,
-			{width: '0px', ease: Power2.easeOut})
-	}
+		this.button.addEventListener('mouseenter', e => {
+			document.getElementById("body").style.cursor = "pointer";
+			gsap.to(this.hover, 0.2,
+	 		  {width: '100px', ease: Power2.easeOut}, '-=0.2')
+	 	  	gsap.to(this.def, 0.2,
+	 		  {x: '90px', ease: Power2.easeOut},)
+		});
+
+		this.button.addEventListener('click', e => {
+			window.open(this.link);
+		});
+
+		this.button.addEventListener('mouseleave', e => {
+			document.getElementById("body").style.cursor = "initial";
+			gsap.to(this.hover, 0.2,
+				{width: '0px', ease: Power2.easeOut}, '-=0.2')
+
+			gsap.to(this.def, 0.2,
+				{x: '0px', ease: Power2.easeOut}, )
+		});
+   }
+}
+
+let activeSocialButtons = []
+for (var i = 0; i < socialButtons.length; i++) {
+	activeSocialButtons[i] = new SocialButton(i, socialButtons.item(i),
+		hoverCircles.item(i), socialDef.item(i), socialLinks[i])
 }
 
 let kebab = true

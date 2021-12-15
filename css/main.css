@@ -136,11 +136,24 @@ p{
 	margin-right: 50px;
 	width: 100px;
 	height: 100px;
-	background-color: var(--main-dark-color);
-	border-radius: 65px;
 	display: flex;
 	align-items:center;
    justify-content: center;
+}
+
+.social-circle{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: var(--main-dark-color);
+	border-radius: 65px;
+	z-index: 0;
+}
+
+.social-def{
+	position: absolute;
+	text-decoration: underline;
+	text-decoration-color: var(--accent-color);
 }
 
 .social-icon{

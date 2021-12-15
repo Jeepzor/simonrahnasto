@@ -154,6 +154,7 @@ p{
 	position: absolute;
 	text-decoration: underline;
 	text-decoration-color: var(--accent-color);
+	text-underline-offset: 3px;
 }
 
 .social-icon{

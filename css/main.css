@@ -118,7 +118,7 @@ p{
 
 /* CV articles that should have a set width*/
 .sized{
-	min-width: 450px;
+	min-width: 400px;
 	width: 30vw;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -416,6 +416,7 @@ p{
 	#cv{
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 0.5fr 0.5fr 0.1fr 0.1fr 200px;
+		grid-row-gap: 100px;
 	}
 
 	.sized{
@@ -452,5 +453,9 @@ p{
 	#project-container{
 		grid-column-start: 1;
 	 	grid-column-end: 2;
+	}
+
+	h2{
+		font-size: 32px;
 	}
 }

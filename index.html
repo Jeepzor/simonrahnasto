@@ -1,204 +1,525 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="description" content="This is the 'Home' page">
-      <meta name="author" content="Simon Rahnasto">
-      <meta name="keywords" content="Simon Rahnasto, DevJeeper">
-		<link rel="stylesheet" href="css/main.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-		<script type = "module" src="js/main.js" ></script>
-		<title>Homepage</title>
-   </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Simon Rahnasto — software engineer, game developer, and educator." />
+    <meta name="author" content="Simon Rahnasto" />
+    <title>Simon Rahnasto | Online CV</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
 
-   <body id = "body">
-      <main>
-			<div id = "scroll-area">
-				<div id="introduction">
-					<h1 id = "hello">Hello there!</h1>
+    <header class="hero" id="top">
+      <nav class="nav">
+        <div class="nav-brand">
+          <span class="nav-dot"></span>
+          <span>SR // DevJeeper</span>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#content">Content</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
 
-					<div id = "portraits">
-						<img src="assets/portrait-jeeper.png" class = "portrait" id = "jeeper">
-						<img src="assets/portrait-simon.jpg" class = "portrait">
-					</div>
+      <div class="hero-grid">
+        <div class="hero-text" data-reveal>
+          <p class="eyebrow">Online CV · Software Engineer</p>
+          <h1>Simon Rahnasto</h1>
+          <p class="tagline">Programming. Game dev. Teaching. Systems thinking.</p>
+          <p class="signature">I build systems that feel great to use.</p>
+          <p class="lead">
+            I build reliable software, craft interactive experiences, and teach programming in a clear, practical way.
+            My roots are in game development and real-time systems, with a focus on readable, maintainable code.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Get in Touch</a>
+          </div>
+          <div class="data-ribbon" aria-label="Profile focus">
+            <span>Stockholm, Sweden</span>
+            <span>BSc Computer Science (in progress)</span>
+            <span>Game systems + tooling</span>
+            <span>Educator & communicator</span>
+          </div>
+          <div class="stat-grid" aria-label="Highlights">
+            <div class="stat">
+              <span class="stat-label">YouTube</span>
+              <span class="stat-value">2.2k+ subs</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Views</span>
+              <span class="stat-value">150k+</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Videos</span>
+              <span class="stat-value">26+</span>
+            </div>
+          </div>
+        </div>
 
-					<div id = "name-column">
-						<p id = "my-name-is">My name is</p>
-						<div id = "name-row">
-							<p id = "name" class = "name">Simon</p>
-							<p id = "surname" class = "name">Rahnasto</p>
-						</div>
-					</div>
+        <div class="hero-portrait" data-reveal>
+          <div class="portrait-stack">
+            <div class="billboard">
+              <img class="portrait portrait-real" src="assets/portrait-simon.jpg" alt="Portrait of Simon Rahnasto" />
+              <img class="portrait portrait-alt" src="assets/portrait-jeeper.png" alt="Stylized portrait" />
+              <span class="billboard-glow" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="terminal-card">
+            <p class="terminal-title">$ whoami</p>
+            <p class="terminal-body">Software engineer · Game developer · Educator</p>
+            <p class="terminal-title">$ focus</p>
+            <p class="terminal-body">Clean architecture, gameplay systems, explainable tech.</p>
+          </div>
+        </div>
+      </div>
+    </header>
 
-					<div id = "scroll-down-column">
-						<p id = "scroll-down-text" class = "scroll-down">Scroll to learn more about me!</p>
-						<p id = "scroll-down-icon" class = "scroll-down">&#128071;</p>
-					</div>
-				</div>
-			</div>
+    <main>
+      <section class="section" id="about">
+        <div class="section-title" data-reveal>
+          <h2 data-cmd="$ about">About</h2>
+          <p>From modding to shipping real products.</p>
+        </div>
+        <div class="content-grid">
+          <div class="panel" data-reveal>
+            <h3>Bio</h3>
+            <p>
+              I started programming in 2010 by learning Blizzard's GalaxyScript to build custom maps for StarCraft II.
+              One of those maps, <strong>The Final Stand</strong>, peaked at #2 in the EU region and #7 in the US for custom games.
+              That experience hooked me on building systems players can feel.
+            </p>
+            <p>
+              Today I study for a BSc in Computer Science at Stockholm University while building software across game tech,
+              tooling, and interactive experiences. I care about clarity, maintainability, and learning new paradigms.
+            </p>
+          </div>
+          <div class="panel" data-reveal>
+            <h3>Strengths</h3>
+            <ul class="list">
+              <li>Clear communicator who can simplify complex technical ideas.</li>
+              <li>Strong foundation in data structures, algorithms, and OOP.</li>
+              <li>Hands-on experience shipping games and interactive products.</li>
+              <li>Practical educator with a proven track record on YouTube.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-         <section id = "cv">
-				<article class = "sized">
-					<h2>Bibliography</h2>
-					<p>My name is Simon Rahnasto and I love programming. My first encounter with it was back in 2010, when I started learning Blizzards 'GalaxyScript' in order to create custom maps for the popular RTS title 'SC2'.
-						With it I created a custom game named 'The Final Stand', which at it's peak reached the second most played custom map in the European Region (and 7th in the US).
-						Ever since then I have been hooked to programming
-						and I really enjoy learning new languages, paradigms, patterns, algorithms and datastructures. I am currently studying for a Bachelors degree in Computer Science at Stockholm University. In my free time I enjoy creating Programming tutorials,
-						working on personal projects and playing RTS games.
-					</p>
-            </article>
+      <section class="section" id="skills">
+        <div class="section-title" data-reveal>
+          <h2 data-cmd="$ skills">Skills & Experience</h2>
+          <p>Modern tools, game tech, and a strong CS base.</p>
+        </div>
+        <div class="content-grid">
+          <div class="panel" data-reveal>
+            <h3>Languages</h3>
+            <div class="tag-grid">
+              <span>C/C++</span>
+              <span>Java</span>
+              <span>C#</span>
+              <span>JavaScript</span>
+              <span>Lua</span>
+              <span>Dart</span>
+            </div>
+          </div>
+          <div class="panel" data-reveal>
+            <h3>Tools & Technologies</h3>
+            <div class="tag-grid">
+              <span>.NET</span>
+              <span>Flutter</span>
+              <span>Unity</span>
+              <span>LÖVE</span>
+              <span>Git</span>
+              <span>UML</span>
+              <span>OOP</span>
+            </div>
+          </div>
+          <div class="panel" data-reveal>
+            <h3>Focus Areas</h3>
+            <ul class="list">
+              <li>Gameplay systems, tooling, and clean architecture.</li>
+              <li>2D game development and rapid prototyping.</li>
+              <li>Developer education and documentation.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-				<article class = "sized">
-					<h2>YouTube Channel</h2>
-					<p>
-						One of my strengths is communication, people tell me that I am very good at simplifying and explaining compex subjects in a way
-						that makes it easy to understand.
-						I find programming very facinating and I really enjoy talking about it. This lead me to create a Youtube channel in august 2020.
-						The goal of the channel is to helps people get started with programming, something which can seem very daunting at first.
-						Currently the channel has a focus on 2d game development with the Lua programming language and the open source framework 'Löve'.
-					</p>
+      <section class="section" id="projects">
+        <div class="section-title" data-reveal>
+          <h2 data-cmd="$ projects">Projects</h2>
+          <p>Selected work from game jams to commercial releases.</p>
+        </div>
+        <div class="card-grid">
+          <a class="card" href="https://windmillgames.itch.io/nine-lives-deep" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/nine-lives-deep.png" alt="Nine Lives Deep cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Nine Lives Deep</h3>
+              <span class="pill">Adventure</span>
+            </div>
+            <p>Top-down combat adventure where Matteo and Leonardo dive for a legendary treasure, battling monsters and waves.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/burning-bells" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/burning-bells.png" alt="Burning Bells cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Burning Bells - Lilleborg 1259</h3>
+              <span class="pill">Adventure</span>
+            </div>
+            <p>Top-down hack-and-slash dungeon crawler where you fight fairies and trolls while adapting to changing conditions.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/blakulla" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzE1NzkwNzgxLnBuZw%3D%3D/315x250%23c/PnXL4Y.png" alt="Blåkulla cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Blåkulla</h3>
+              <span class="pill">Adventure</span>
+            </div>
+            <p>Moody forest adventure where you summon elements by drawing tarot cards in a rain-soaked wilderness.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/fowl-play" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzEzNjA5NDQ2LnBuZw%3D%3D/315x250%23c/JW68wT.png" alt="Fowl Play cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Fowl Play</h3>
+              <span class="pill">Murder Mystery</span>
+            </div>
+            <p>Detective mystery at a lavish fowl party—interrogate suspects with your umbrella and solve the murder.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/swan-song" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzEyMDUzMTU2LnBuZw%3D%3D/315x250%23c/U6zuln.png" alt="Swan Song cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Swan Song</h3>
+              <span class="pill">Horror</span>
+            </div>
+            <p>Retrieve cryo-sleeping humans and escape as you manage light and danger aboard a breached ship.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/who-let-the-dogs-out" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzExNDUwMTY4LnBuZw%3D%3D/315x250%23c/tbtB44.png" alt="Who let the dogs out cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Who let the dogs out?</h3>
+              <span class="pill">Murder mystery</span>
+            </div>
+            <p>Fully voiced point-and-click mystery at a farm—interrogate suspects, find clues, and stamp the culprit.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/chop-crop-drop" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/chop-crop-drop.png" alt="Chop Crop & Drop cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Chop Crop & Drop</h3>
+              <span class="pill">Turn based</span>
+            </div>
+            <p>Turn-based rogue raccoon adventure mixing farming with card-and-dice combat to lure a sea monster.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/redrink" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/redrink.png" alt="RED RINK cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>RED RINK</h3>
+              <span class="pill">Sports</span>
+            </div>
+            <p>Chaotic hockey brawler with monsters and an explosive puck that keeps every match volatile.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/vargavinter" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzg1ODc0MTIucG5n/315x250%23c/uvqfSg.png" alt="VargaVinter cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>VargaVinter</h3>
+              <span class="pill">Survival</span>
+            </div>
+            <p>Carry your child through snowy woods, keeping warm and safe from hunger and whispers in a survival tale with multiple endings.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/earthquake-survivors" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzgzMjQ4NjcucG5n/315x250%23c/udIIR8.png" alt="Earthquake Survivors cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Earthquake Survivors</h3>
+              <span class="pill">Suvivor</span>
+            </div>
+            <p>Survive relentless quake chaos with quick decisions and tight resource management.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/darkness-in-bloom" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzcxNTAxNjcucG5n/315x250%23c/w60Qe2.png" alt="Darkness In Bloom cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Darkness In Bloom</h3>
+              <span class="pill">Adventure</span>
+            </div>
+            <p>Balance chaos and lifeforce by draining and funneling energy in a moody action-puzzle.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/chainball" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzYyMTkzMTcucG5n/315x250%23c/RSUkG9.png" alt="Chainball cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Chainball!</h3>
+              <span class="pill">Sports</span>
+            </div>
+            <p>Physics-driven sports duel—score by swinging a ball-and-chain attached to your ankle.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/disco-inferno" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzU3OTg0NzQucG5n/315x250%23c/WBTayw.png" alt="Disco Inferno cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Disco Inferno</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>Bullet-hell chaos with neon vibes and relentless enemy patterns.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/ouroboros" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzQzNzAwMTAucG5n/315x250%23c/qwp5UC.png" alt="Ouroboros cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Ouroboros</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>Roguelite dungeon crawler focused on bow combat, loot, and boss battles.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/soul-control" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzM4NTM5MDQucG5n/315x250%23c/VPvcgN.png" alt="Soul Control cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Soul Control</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>Local multiplayer where one player is a fighter and the other a ghost, battling for control and destroying rival urns.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/the-drown" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzMzNDk1OTcucG5n/315x250%23c/wwtc0W.png" alt="The Drown cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>The Drown</h3>
+              <span class="pill">Shooter</span>
+            </div>
+            <p>Story-driven shooter and base-defense experience with a dark, sci-fi atmosphere.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/shi-no-ganbo" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzI1NjkyMTguanBn/315x250%23c/sAasAr.jpg" alt="Shi no ganbo cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Shi no ganbo</h3>
+              <span class="pill">Platformer</span>
+            </div>
+            <p>Side-scrolling platformer about loss; awaken in the afterlife and reclaim your shattered self.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/path-of-redemption" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzIwNjYxNTgucG5n/315x250%23c/38ZPT8.png" alt="Path of Redemption cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Path of Redemption</h3>
+              <span class="pill">Adventure</span>
+            </div>
+            <p>Dungeon crawler made for Ludum Dare—ranked 7th overall out of 3000+ entries.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/lucky-number-13" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzE2OTAyMjcucG5n/315x250%23c/qObIha.png" alt="Lucky Number 13 cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Lucky Number 13</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>A revenge-fueled action vignette with a sharp, punchy premise.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/sneaky-funk" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1nLzE2MDU2NjIuanBn/315x250%23c/AR2dsk.jpg" alt="Sneaky Funk cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Sneaky Funk</h3>
+              <span class="pill">Adventure</span>
+            </div>
+            <p>Melee-focused roguelite dungeon crawler with tight combat loops.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/the-meltdown" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvMzAxNDgyLzE0NzUyMTIucG5n/315x250%23c/2r3erK.png" alt="The Meltdown cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>The Meltdown</h3>
+              <span class="pill">Puzzle</span>
+            </div>
+            <p>A puzzle game without puzzles—follow the instructions and let it mess with your expectations.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/final-voyage" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvMjkxODUzLzE0Mjg5ODYucG5n/315x250%23c/aB85jP.png" alt="Final Voyage cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Final Voyage</h3>
+              <span class="pill">Strategy</span>
+            </div>
+            <p>Fast-paced RTS about containing a breach on your ship while balancing macro building and micro combat.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/cardcade" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvMjQ5NTA0LzEyMDE0NjIucG5n/315x250%23c/4lj33Y.png" alt="Cardcade cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Cardcade</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>A card-game dungeon crawler where thrown cards trigger abilities and your deck evolves as you progress.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/city-mayhem" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvMjAxOTg1Lzk0NjQwMi5wbmc%3D/315x250%23c/DOlVTL.png" alt="City Mayhem cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>City Mayhem</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>Top-down shooter where the goal is simple: cause maximum mayhem.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/spaced-out" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/spaced-out.png" alt="Spaced out cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Spaced out</h3>
+              <span class="pill">Racing</span>
+            </div>
+            <p>Space racing meets musical chairs in a frantic multiplayer sprint.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/arr-world" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/arr-world.png" alt="ARR World cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>ARR World</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>Sail the seas, plunder what you can, and survive pirate chaos.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/forest-rivalry" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/forest-rivalry.png" alt="Forest Rivalry cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Forest Rivalry</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>A tight duel to the death in a forest arena.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/muoto-the-geometry-wizard" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvNjMzMjQvMjg5ODIxLnBuZw%3D%3D/315x250%23c/6SPi5E.png" alt="Muoto the geometry wizard cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Muoto the geometry wizard</h3>
+              <span class="pill">Adventure</span>
+            </div>
+            <p>Randomly generated dungeon adventure—fight through rooms and beat the boss.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/luminosity" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvNTcxNS8xNjQwNC5wbmc%3D/315x250%23c/509e73.png" alt="Luminosity cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Luminosity</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>Action-packed arcade score attack with fast ship combat and glowing arenas.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/svardbjorn" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/svardbjorn.png" alt="SvardBjorn cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>SvardBjorn</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>Two-button Viking survival—hold the line against endless hordes.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/village-mayem" data-reveal>
+            <img class="card-thumb" src="assets/thumbnails/village-mayem.png" alt="Village Mayhem cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Village Mayhem</h3>
+              <span class="pill">Action</span>
+            </div>
+            <p>Top-down action arcade where a dark creature wreaks havoc on defenseless villages.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/valovarjo" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvMjM1MzUvOTM0MTQucG5n/315x250%23c/71PJAQ.png" alt="Valo/Varjo cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Valo/Varjo</h3>
+              <span class="pill">Puzzle</span>
+            </div>
+            <p>Moody puzzle game about a being of light using a luminous sphere to solve and survive.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/adventure-smasher" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvMTU1MjgvNTQ1MjEucG5n/315x250%23c/OA9Mc7.png" alt="Adventure Smasher cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Adventure Smasher</h3>
+              <span class="pill">Survival</span>
+            </div>
+            <p>Play a demon with cannon arms and smash invading adventurers for as long as you can.</p>
+          </a>
+          <a class="card" href="https://windmillgames.itch.io/sunborn-the-tale-of-connected-worlds" data-reveal>
+            <img class="card-thumb" src="https://img.itch.zone/aW1hZ2UvMTA4ODUvMzMxMDQucG5n/315x250%23c/mMruDm.png" alt="Sunborn cover art" loading="lazy" />
+            <div class="card-header">
+              <h3>Sunborn: The tale of connected worlds</h3>
+              <span class="pill">Platformer</span>
+            </div>
+            <p>Action platformer set across connected worlds.</p>
+          </a>
+        </div>
+      </section>
 
-					<a href="https://www.youtube.com/c/DevJeeper/videos">
-						<span id = "youtube-info">
-							<img class = "social-icon"
-								src="assets/social/youtube.svg"
-								alt="Youtube logo"
-								width="120px"
-							/>
-							<p id = "youtube-info-text">1.5k Subscribers <br> 100k Views <br> 24 videos</p>
-						</span>
+      <section class="section" id="content">
+        <div class="section-title" data-reveal>
+          <h2 data-cmd="$ content">Content & Education</h2>
+          <p>Teaching programming through approachable, practical videos.</p>
+        </div>
+        <div class="content-grid">
+          <div class="panel" data-reveal>
+            <h3>YouTube Channel</h3>
+            <p>
+              I run the DevJeeper YouTube channel, focused on helping people start programming and build 2D games with Lua and LÖVE.
+              I enjoy breaking down hard topics into simple, actionable steps.
+            </p>
+            <a class="btn inline" href="https://www.youtube.com/c/DevJeeper/videos">
+              <img src="assets/social/youtube.svg" alt="YouTube" />
+              Visit Channel
+            </a>
+          </div>
+          <div class="panel" data-reveal>
+            <h3>What I Teach</h3>
+            <ul class="list">
+              <li>Fundamentals of game development and game loops.</li>
+              <li>Programming basics for beginners.</li>
+              <li>Lua and LÖVE engine workflows.</li>
+              <li>Clear code structure and maintainable patterns.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-					</a>
-            </article>
+      <section class="section" id="contact">
+        <div class="section-title" data-reveal>
+          <h2 data-cmd="$ contact">Contact</h2>
+          <p>Let’s build something solid.</p>
+        </div>
+        <div class="content-grid">
+          <div class="panel" data-reveal>
+            <h3>Find Me Online</h3>
+            <div class="social-grid">
+              <a class="social" href="https://www.youtube.com/c/DevJeeper/videos">
+                <img src="assets/social/youtube.svg" alt="YouTube" />
+                <span>YouTube</span>
+              </a>
+              <a class="social" href="https://github.com/Jeepzor">
+                <img src="assets/social/github.svg" alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+              <a class="social" href="https://www.linkedin.com/in/simon-rahnasto/">
+                <img src="assets/social/linkedin.svg" alt="LinkedIn" />
+                <span>LinkedIn</span>
+              </a>
+              <a class="social" href="https://windmillgames.itch.io/">
+                <img src="assets/social/itchio.svg" alt="itch.io" />
+                <span>itch.io</span>
+              </a>
+            </div>
+          </div>
+          <div class="panel" data-reveal>
+            <h3>Highlights</h3>
+            <ul class="list">
+              <li>10+ years of programming experience rooted in game development.</li>
+              <li>Experience shipping a commercial Steam title.</li>
+              <li>Comfortable working across languages, tools, and teams.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
 
-				<article class = "sized">
-					<h2>Skills & Experience</h2>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-label">Email</span>
+          <a class="footer-value placeholder" href="#" aria-disabled="true">hello@yourdomain.com</a>
+        </div>
+        <div>
+          <span class="footer-label">Location</span>
+          <span class="footer-value">Stockholm, Sweden</span>
+        </div>
+        <div>
+          <span class="footer-label">Availability</span>
+          <span class="footer-value">Contact for details</span>
+        </div>
+      </div>
+      <p>© 2026 Simon Rahnasto. Crafted with focus and intent.</p>
+    </footer>
 
-					<div id = "langs">
-						<h3>Languages</h3>
-						<ul>
-							<li>C/C++</li>
-							<li>Java</li>
-							<li>Javascript</li>
-							<li>Lua</li>
-							<li>Dart</li>
-						</ul>
-					</div>
-
-					<div id="tools">
-						<h3>Tools & Technologies</h3>
-						<ul>
-							<li>Löve</li>
-							<li>Flutter</li>
-							<li>Unity3D</li>
-							<li>OOP</li>
-							<li>UML</li>
-							<li>Git</li>
-						</ul>
-					</div>
-            </article>
-
-				<article class = "expand" id = "project-container">
-					<h2>Projects</h2>
-					<div id="projects">
-						<a href="https://ldjam.com/events/ludum-dare/44/path-of-redemption">
-							<div class="project">
-								<img class="project_img" src="https://img.itch.zone/aW1nLzIwNjYxNTgucG5n/315x250%23c/38ZPT8.png">
-								<div class="description">
-									<h3 class = "project-title">Path of Redemption</h3>
-									<p> A dungeon crawler made for the Game Jam competition 'Ludum Dare #44'. With over 3000 entries, it placed 7th in the 'Overall' Category</p>
-								</div>
-							</div>
-						</a>
-
-						<a href="https://store.steampowered.com/app/346780/Luminosity/">
-							<div class="project">
-								<img class="project_img" src="https://img.itch.zone/aW1hZ2UvNTcxNS8xNjQwNC5wbmc=/315x250%23c/509e73.png">
-								<div class="description">
-									<h3 class = "project-title">Luminosity</h3>
-									<p>An arcade score attack game, a commercial game released on Steam</p>
-								</div>
-							</div>
-						</a>
-
-						<a href="https://windmillgames.itch.io/final-voyage">
-							<div class="project">
-								<img class="project_img" src="https://img.itch.zone/aW1hZ2UvMjkxODUzLzE0Mjg5ODYucG5n/315x250%23c/aB85jP.png">
-								<div class="description">
-									<h3 class = "project-title">Final Voyage</h3>
-									<p>As an avid RTS player, I naturally had to include 'Final Voyage', an RTS game with a twist!</p>
-								</div>
-							</div>
-						</a>
-
-						<a href="https://windmillgames.itch.io/The-Drown">
-							<div class="project">
-								<img class="project_img" src="https://img.itch.zone/aW1nLzMzNDk1OTcucG5n/315x250%23c/wwtc0W.png">
-								<div class="description">
-									<h3 class = "project-title">The Drown</h3>
-									<p>A story driven shooter & base defense game, with an intense and dark atmosphere.</p>
-								</div>
-							</div>
-						</a>
-					</div>
-            </article>
-
-				<article id = "socials" class = "expand">
-					<h2>Socials</h2>
-					<div class="social-row">
-						<span class="social-button" id = "github">
-							<div class="social-def" id = "github-def"><p>Github</p> </div>
-							<div class="social-circle"></div>
-							<div class="hover-circle"></div>
-							<img class = "social-icon"
-								src="assets/social/github.svg"
-								alt="Github logo"
-								width="50px"
-							/>
-						</span>
-
-						<span class="social-button" id = "youtube">
-							<div class="social-def" id = "youtube-def"><p>YouTube</p> </div>
-							<div class="social-circle"></div>
-							<div class="hover-circle"></div>
-							<img class = "social-icon"
-								src="assets/social/youtube.svg"
-								alt="Youtube logo"
-								width="70px"
-							/>
-						</span>
-
-						<span class="social-button" id = "linkedin">
-							<div class="social-def" id = "linkedin-def"><p>LinkedIn</p> </div>
-							<div class="social-circle"></div>
-							<div class="hover-circle"></div>
-							<img class = "social-icon"
-								src="assets/social/linkedin.svg"
-								alt="LinkedIn logo"
-								width="50px"
-							/>
-						</span>
-
-						<span class="social-button" id = "itchio">
-							<div class="social-def" id = "itchio-def"><p>itch.io</p> </div>
-							<div class="social-circle"></div>
-							<div class="hover-circle"></div>
-							<img class = "social-icon"
-								src="assets/social/itchio.svg"
-								alt="Itch.io logo"
-								width="50px"
-							/>
-						</span>
-					</div>
-				</article>
-         </section>
-      </main>
-
-      <footer>
-
-      </footer>
-   </body>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>

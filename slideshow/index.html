@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI and Software Development</title>
+  <base href="/slideshow/">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide slide-title active" data-slide="1">
+      <div class="slide-content title-layout">
+        <p class="kicker">AI and Software Development</p>
+        <h1>What changes when code becomes the output?</h1>
+        <div class="agenda-list" aria-label="Presentation overview">
+          <div data-step><span>01</span><p>Model capability has crossed an important threshold</p></div>
+          <div data-step><span>02</span><p>Interaction patterns moved from chat to agent loops</p></div>
+          <div data-step><span>03</span><p>Manual programming is losing value; engineering is not</p></div>
+          <div data-step><span>04</span><p>Vibe coding vs. agentic engineering</p></div>
+          <div data-step><span>05</span><p>Verification tools become part of development</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide image-slide" data-slide="2">
+      <div class="slide-content split-layout">
+        <div class="text-panel">
+          <p class="kicker">Capability Shift</p>
+          <h2>AI models have improved a lot</h2>
+          <p class="lead" data-step>The shift is not just better autocomplete. Models have moved from barely producing compilable snippets to fixing complex problems across large codebases.</p>
+          <ul class="clean-list">
+            <li data-step>They can hold more project context.</li>
+            <li data-step>They can reason through multi-file changes.</li>
+            <li data-step>They can run tools, observe results, and iterate.</li>
+          </ul>
+        </div>
+        <figure class="media-frame" data-step>
+          <img src="1.webp" alt="Visual representing AI capability growth">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="3">
+      <div class="slide-content">
+        <p class="kicker">Interaction Model</p>
+        <h2>The way we interact with AI has evolved</h2>
+        <div class="timeline">
+          <article data-step>
+            <span>1</span>
+            <h3>Chatbot</h3>
+            <p>We wrote messages into a website and copied answers back into our work.</p>
+          </article>
+          <article data-step>
+            <span>2</span>
+            <h3>IDE Assistant</h3>
+            <p>AI moved into the editor as a more capable form of autocomplete.</p>
+          </article>
+          <article data-step>
+            <span>3</span>
+            <h3>Coworker</h3>
+            <p>Apps and agents started owning tasks, reading code, editing files, and reporting back.</p>
+          </article>
+          <article data-step>
+            <span>4</span>
+            <h3>Loops</h3>
+            <p>The valuable work is increasingly designing feedback loops instead of perfect prompts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide statement-slide" data-slide="4">
+      <div class="slide-content statement-layout">
+        <div>
+          <p class="kicker">Role Shift</p>
+          <h2>Programming manually is dead. We just have not fully noticed yet.</h2>
+        </div>
+        <div class="statement-grid">
+          <article data-step>
+            <h3>Programmer</h3>
+            <p>Typing instructions line by line is becoming less valuable as the machine gets better at producing the code itself.</p>
+          </article>
+          <article data-step>
+            <h3>Software Engineer</h3>
+            <p>Understanding systems, requirements, tradeoffs, failure modes, architecture, and verification is still valuable.</p>
+          </article>
+          <article class="wide-card" data-step>
+            <h3>The compiler analogy</h3>
+            <p>Compilers made hand-written machine code unnecessary for most work. The value moved upward: into language design, architecture, debugging, performance, and system understanding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="5">
+      <div class="slide-content">
+        <p class="kicker">Engineering Discipline</p>
+        <h2>Vibe coding and agentic engineering are not the same thing</h2>
+        <div class="compare-grid">
+          <article data-step>
+            <h3>Vibe Coding</h3>
+            <ul>
+              <li>Describe the desired result loosely.</li>
+              <li>Accept output when it appears to work.</li>
+              <li>Rely on intuition and manual inspection.</li>
+              <li>Move fast, but often without durable control.</li>
+            </ul>
+          </article>
+          <article data-step>
+            <h3>Agentic Engineering</h3>
+            <ul>
+              <li>Define the target behavior and constraints.</li>
+              <li>Give agents tools, context, and feedback.</li>
+              <li>Use tests, checks, traces, and review loops.</li>
+              <li>Treat architecture as a controllable input.</li>
+            </ul>
+          </article>
+        </div>
+        <aside class="insight-band" data-step>
+          Old truths need to be re-evaluated. If rebuilding is cheap, changeability matters differently. Code starts to look more like compiled requirements plus architectural decisions.
+        </aside>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="6">
+      <div class="slide-content verify-layout">
+        <div>
+          <p class="kicker">Feedback Loops</p>
+          <h2>Building verification tools becomes part of development</h2>
+          <p class="lead" data-step>Agents need a way to know whether they are right. Evaluation is not an afterthought; it is the engine that makes loops useful.</p>
+        </div>
+        <div class="loop-diagram" aria-label="Agent verification loop">
+          <div data-step>Task</div>
+          <div data-step>Agent</div>
+          <div data-step>Code</div>
+          <div data-step>Checks</div>
+          <div data-step>Evidence</div>
+        </div>
+        <div class="tool-grid">
+          <article data-step>
+            <h3>Examples</h3>
+            <p>Tests, linters, screenshots, performance probes, type checks, fixtures, simulations, and production-like traces.</p>
+          </article>
+          <article data-step>
+            <h3>Result</h3>
+            <p>The engineer spends less time typing code and more time shaping the loop that proves the output is good.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide project-slide" data-slide="7">
+      <div class="slide-content project-layout">
+        <div class="project-copy">
+          <p class="kicker">My Experience</p>
+          <h2>wx_voxels: agentic engineering in a real project</h2>
+          <p class="lead" data-step data-step-order="2">A Lua voxel game and editor stack: runtime rendering, terrain, gameplay systems, asset tooling, screenshot checks, and performance instrumentation.</p>
+          <div class="metric-grid">
+            <article data-step data-step-order="3"><strong>259</strong><span>Lua files</span></article>
+            <article data-step data-step-order="4"><strong>163k</strong><span>lines of code</span></article>
+            <article data-step data-step-order="5"><strong>1,523</strong><span>unit tests</span></article>
+            <article data-step data-step-order="6"><strong>295</strong><span>regression tests</span></article>
+          </div>
+        </div>
+        <figure class="project-shot project-media-swap" data-step data-step-order="1">
+          <video src="animation_loop.mp4" poster="wx_voxels_editor.png" autoplay muted loop playsinline controls></video>
+          <video class="project-fire-video" src="fire.mp4" poster="wx_voxels_editor.png" autoplay muted loop playsinline controls data-step data-step-order="7"></video>
+        </figure>
+        <div class="feature-strip" data-step data-step-order="8">
+          <span>Voxel editor</span>
+          <span>Runtime map editor</span>
+          <span>Terrain sculpting</span>
+          <span>Cinematics</span>
+          <span>Events and requirements</span>
+          <span>Benchmark and screenshot tooling</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide loop-slide" data-slide="8">
+      <div class="slide-content loop-case-layout">
+        <div class="loop-case-copy">
+          <p class="kicker">Case Study</p>
+          <h2>Performance improvement loop</h2>
+          <p class="lead" data-step>The useful prompt was not a sentence. It was a controlled loop with a scene, logs, tests, and a measurable target.</p>
+        </div>
+        <figure class="perf-shot" data-step>
+          <video src="waterfall_fast.mp4" poster="wx_voxels_perf_scene.png" autoplay muted loop playsinline controls></video>
+        </figure>
+        <div class="loop-steps">
+          <article data-step><span>1</span><p>Create a repeatable test that reproduces the performance problem</p></article>
+          <article data-step><span>2</span><p>Add performance logging that shows what parts take the most time during a frame</p></article>
+          <article data-step><span>3</span><p>Let the agent run the test, collect output, and identify the likely hotspots</p></article>
+          <article data-step><span>4</span><p>Implement targeted changes based on the measured bottlenecks</p></article>
+          <article data-step><span>5</span><p>Run regression checks, then rerun the benchmark to verify the FPS gain</p></article>
+        </div>
+        <aside class="result-band" data-step>
+          Result: the loop successfully improved performance by 30%.
+        </aside>
+      </div>
+    </section>
+
+    <section class="slide artifact-slide" data-slide="9">
+      <div class="slide-content artifact-layout">
+        <div class="artifact-hero">
+          <div class="artifact-copy">
+            <p class="kicker">Final Thought</p>
+            <h2>Loops are not just for code</h2>
+            <p class="lead" data-step>In the end, everything on a computer is represented as data. That means agents can work with more than source files: assets, rigs, animation timelines, screenshots, and review artifacts can all become part of a loop.</p>
+          </div>
+          <figure class="animation-video" data-step>
+            <video src="animation_loop.mp4" autoplay muted loop playsinline controls></video>
+          </figure>
+        </div>
+        <div class="artifact-cards">
+          <article data-step>
+            <h3>Example: wx_voxels</h3>
+            <p>I used the animation and rigging system as an agentic workflow, not just as a manual editor.</p>
+          </article>
+          <article data-step>
+            <h3>Asset Loop</h3>
+            <p>The AI could create voxel assets, rig them, and animate them as linked steps in one process.</p>
+          </article>
+          <article data-step>
+            <h3>Evaluation Loop</h3>
+            <p>The system could export image sequences of the animation so each result could be inspected and improved.</p>
+          </article>
+        </div>
+        <div class="sequence-strip" data-step>
+          <span>Generate asset</span>
+          <span>Rig model</span>
+          <span>Animate</span>
+          <span>Export frames</span>
+          <span>Evaluate</span>
+          <span>Iterate</span>
+        </div>
+        <aside class="closing-band" data-step>
+          The broader shift is from prompting for outputs to designing loops that can produce and evaluate almost any digital artifact.
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="Slideshow controls">
+    <button class="icon-button" id="prev" type="button" aria-label="Previous slide" title="Previous slide">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"/></svg>
+    </button>
+    <span id="counter">1 / 9</span>
+    <button class="icon-button" id="next" type="button" aria-label="Next slide" title="Next slide">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  </nav>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <script src="script.js?v=2"></script>
+</body>
+</html>
